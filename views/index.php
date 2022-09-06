@@ -30,7 +30,43 @@
   gtag('js', new Date());
 
   gtag('config', 'G-EXMSZ3KHT7');
+    
+    
+    let box = document.querySelector("#preloader"),
+    btn = document.querySelector("#skip");
+
+function fadeOut() {
+    box.classList.add("visuallyhidden");
+    box.addEventListener(
+        "transitionend",
+        function(e) {
+            box.classList.add("hidden");
+        }, {
+            capture: false,
+            once: true,
+            passive: false
+        }
+    );
+}
+btn.addEventListener("click", fadeOut, false);
+setTimeout(fadeOut, 4000);
+
+
+
+const possibleVideos = [
+    "https://res.cloudinary.com/dicmh7cfa/image/upload/v1657899948/logos%20monfu%202022/sidebar/Group_8_2_b9zxey.png",
+    "https://res.cloudinary.com/dicmh7cfa/image/upload/v1657899877/logos%20monfu%202022/sidebar/Group_8_1_ceeesm.png",
+    "https://res.cloudinary.com/dicmh7cfa/image/upload/v1657899792/logos%20monfu%202022/sidebar/Group_8_xlv30t.png",
+    "https://res.cloudinary.com/dicmh7cfa/image/upload/v1657899948/logos%20monfu%202022/sidebar/Group_8_2_b9zxey.png",
+    "https://res.cloudinary.com/dicmh7cfa/image/upload/v1657899877/logos%20monfu%202022/sidebar/Group_8_1_ceeesm.png",
+    "https://res.cloudinary.com/dicmh7cfa/image/upload/v1657899792/logos%20monfu%202022/sidebar/Group_8_xlv30t.png"
+];
+const randomVideo =
+    possibleVideos[Math.floor(Math.random() * possibleVideos.length)];
+document.getElementById("home").style.backgroundImage = "url('" + randomVideo + "')";
+
 </script>
+    
     <!-- favicon -->
     <link rel="icon" href="https://res.cloudinary.com/dicmh7cfa/image/upload/v1655220438/logos%20monfu%202022/image_1_wzq9wi.png" type="image/x-icon" integrity="sha384-pbBRQFBUC2XbzbDXPjcgkGfsIWzi6CPYSf3pWHonbOAee8HCytZE3D7uChfGCXwb" crossorigin="anonymous">
     <link rel='apple-touch-icon' href='https://res.cloudinary.com/dicmh7cfa/image/upload/v1655220438/logos%20monfu%202022/image_1_wzq9wi.png'>
